@@ -31,6 +31,7 @@ NeoBundle 't9md/vim-quickhl'
 
 " カラー
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " 関数一覧
 NeoBundle 'vim-scripts/taglist.vim'
@@ -51,7 +52,13 @@ endif
 
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+NeoBundle 'Lokaltog/powerline', {
+  \ 'rtp' : 'powerline/bindings/vim'
+  \ }
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Shougo/vimfiler'
 
 "---------------------------------------
 
@@ -60,7 +67,7 @@ call neobundle#end()
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
 filetype on
-syntax on
+syntax enable
 
 " インストールのチェック
 NeoBundleCheck
@@ -70,8 +77,8 @@ NeoBundleCheck
 """"""""""""""""""""""""""""""
 
 " taglist {{{
-set tags = tags
-let Tlist_Ctags_Cmd = 'C:/vim74-kaoriya-win64/ctags'
+set tags=tags
+let Tlist_Ctags_Cmd = 'C:/vim74-kaoriya-win64/ctags.exe'
 let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Exit_OnlyWindow = 1
@@ -113,6 +120,11 @@ let g:alpaca_powertabline_enable = 1
 
 " powerline {{{
 let g:Powerline_symbols = 'fancy'
+" }}}
+
+" unite-outline {{{
+"let g:unite_split_rule = 'botright'
+"noremap ,u <ESC>:Unite -vertical -winwidth=40 outline<Return>
 " }}}
 
 """"""""""""""""""""""""""""""
@@ -173,6 +185,8 @@ set whichwrap=b,s,h,l,<,>,[,]
 set cursorline
 
 set tabstop=4
+set shiftwidth=4
+set softtabstop=0
 
 set expandtab
 
@@ -190,10 +204,3 @@ set guioptions-=e
 " 大文字が入ると、ignorecase が無効にする
 set ignorecase
 set smartcase
-
-""""""""""""""""""""""""""""""
-" 表示の設定
-""""""""""""""""""""""""""""""
-set guifont=Consolas:h9:cSHIFTJIS
-colorscheme jellybeans
-set t_Co=256
