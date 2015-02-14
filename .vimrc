@@ -191,3 +191,5 @@ set whichwrap=b,s,h,l,<,>,[,]
 set cursorline
 
 set tabstop=4
+
+set expandtab
