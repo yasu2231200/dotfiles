@@ -49,6 +49,10 @@ if has('lua')
     \ }
 endif
 
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+
 "---------------------------------------
 
 call neobundle#end()
@@ -103,38 +107,16 @@ xmap <Space>M <Plug>(quickhl-reset)
 nmap <Space>j <Plug>(quickhl-match)
 " }}}
 
+" Alpaca_Powertabline {{{
+let g:alpaca_powertabline_enable = 1
+" }}}
+
+" powerline {{{
+let g:Powerline_symbols = 'fancy'
+" }}}
+
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
-""""""""""""""""""""""""""""""
-let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
-
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
-
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
@@ -178,13 +160,13 @@ nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 " スワップファイルは使わない(ときどき面倒な警告が出るだけで役に立ったことがない)
 set noswapfile
 " カーソルが何行目の何列目に置かれているかを表示する
-set ruler
+"set ruler
 " コマンドラインに使われる画面上の行数
-set cmdheight=2
+"set cmdheight=2
 " エディタウィンドウの末尾から2行目にステータスラインを常時表示させる
 set laststatus=2
 " ステータス行に表示させる情報の指定(どこからかコピペしたので細かい意味はわかっていない)
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+"set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 
@@ -193,3 +175,20 @@ set cursorline
 set tabstop=4
 
 set expandtab
+
+set encoding=utf-8
+
+set statusline=2
+
+" タブページを常に表示
+set showtabline=2
+
+" gVimでもテキストベースのタブページを使う
+set guioptions-=e
+
+""""""""""""""""""""""""""""""
+" 表示の設定
+""""""""""""""""""""""""""""""
+set guifont=Consolas:h9:cSHIFTJIS
+colorscheme jellybeans
+set t_Co=256
