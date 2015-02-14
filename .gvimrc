@@ -1,6 +1,6 @@
 
 """"""""""""""""""""""""""""""
-" Х\ОжВ╠Р▌Тш
+" шбичд║уБошинхоЪ
 """"""""""""""""""""""""""""""
 set guifont=Consolas:h9:cSHIFTJIS
 colorscheme jellybeans
