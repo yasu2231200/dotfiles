@@ -189,3 +189,5 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 set whichwrap=b,s,h,l,<,>,[,]
 
 set cursorline
+
+set tabstop=4
