@@ -2,25 +2,25 @@
 filetype off
 
 """"""""""""""""""""""""""""""
-" NeoBundle‚Ìİ’è
+" NeoBundleã®è¨­å®š
 """"""""""""""""""""""""""""""
 
-" vim‹N“®‚Ì‚İruntimepath‚Éneobundle.vim‚ğ’Ç‰Á
+" vimèµ·å‹•æ™‚ã®ã¿runtimepathã«neobundle.vimã‚’è¿½åŠ 
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-" neobundle.vim‚Ì‰Šú‰» 
+" neobundle.vimã®åˆæœŸåŒ– 
 call neobundle#begin(expand('~/.vim/bundle'))
 
-" NeoBundle‚ğXV‚·‚é‚½‚ß‚Ìİ’è
+" NeoBundleã‚’æ›´æ–°ã™ã‚‹ãŸã‚ã®è¨­å®š
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "---------------------------------------
-" “Ç‚İ‚Şƒvƒ‰ƒOƒCƒ“‚ğ‹LÚ
+" èª­ã¿è¾¼ã‚€ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’è¨˜è¼‰
 
-" ƒnƒCƒ‰ƒCƒg(“®‚©‚È‚¢)
+" ãƒã‚¤ãƒ©ã‚¤ãƒˆ(å‹•ã‹ãªã„)
 NeoBundle 't9md/vim-quickhl'
 "NeoBundleLazy 't9md/vim-quickhl', {
 "    \ 'autoload' : {
@@ -29,19 +29,19 @@ NeoBundle 't9md/vim-quickhl'
 "    \   },
 "    \}
 
-" ƒJƒ‰[
+" ã‚«ãƒ©ãƒ¼
 NeoBundle 'nanotech/jellybeans.vim'
 
-" ŠÖ”ˆê——
+" é–¢æ•°ä¸€è¦§
 NeoBundle 'vim-scripts/taglist.vim'
 
-" ƒtƒ@ƒCƒ‹ˆê——
+" ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§
 NeoBundle 'scrooloose/nerdtree'
 
-" ƒCƒ“ƒfƒ“ƒg‚ÉF‚ğ•t‚¯‚ÄŒ©‚â‚·‚­‚·‚é
+" ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã«è‰²ã‚’ä»˜ã‘ã¦è¦‹ã‚„ã™ãã™ã‚‹
 NeoBundle 'nathanaelkane/vim-indent-guides'
 
-" •âŠ®
+" è£œå®Œ
 if has('lua')
   NeoBundleLazy 'Shougo/neocomplete.vim', {
     \ 'depends' : 'Shougo/vimproc',
@@ -53,16 +53,16 @@ endif
 
 call neobundle#end()
 
-" “Ç‚İ‚ñ‚¾ƒvƒ‰ƒOƒCƒ“‚àŠÜ‚ßAƒtƒ@ƒCƒ‹ƒ^ƒCƒv‚ÌŒŸoAƒtƒ@ƒCƒ‹ƒ^ƒCƒv•Êƒvƒ‰ƒOƒCƒ“/ƒCƒ“ƒfƒ“ƒg‚ğ—LŒø‰»‚·‚é
+" èª­ã¿è¾¼ã‚“ã ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚‚å«ã‚ã€ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—ã®æ¤œå‡ºã€ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—åˆ¥ãƒ—ãƒ©ã‚°ã‚¤ãƒ³/ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’æœ‰åŠ¹åŒ–ã™ã‚‹
 filetype plugin indent on
 filetype on
 syntax on
 
-" ƒCƒ“ƒXƒg[ƒ‹‚Ìƒ`ƒFƒbƒN
+" ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®ãƒã‚§ãƒƒã‚¯
 NeoBundleCheck
 
 """"""""""""""""""""""""""""""
-" ƒvƒ‰ƒOƒCƒ“‚Ìİ’è
+" ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®è¨­å®š
 """"""""""""""""""""""""""""""
 
 " taglist {{{
@@ -104,7 +104,7 @@ nmap <Space>j <Plug>(quickhl-match)
 " }}}
 
 """"""""""""""""""""""""""""""
-" ‘}“üƒ‚[ƒhAƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚ÌF‚ğ•ÏX
+" æŒ¿å…¥ãƒ¢ãƒ¼ãƒ‰æ™‚ã€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã®è‰²ã‚’å¤‰æ›´
 """"""""""""""""""""""""""""""
 let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
 
@@ -138,7 +138,7 @@ endfunction
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
-" ©“®“I‚É•Â‚¶Š‡ŒÊ‚ğ“ü—Í
+" è‡ªå‹•çš„ã«é–‰ã˜æ‹¬å¼§ã‚’å…¥åŠ›
 """"""""""""""""""""""""""""""
 imap { {}<LEFT>
 imap [ []<LEFT>
@@ -146,7 +146,7 @@ imap ( ()<LEFT>
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
-" ÅŒã‚ÌƒJ[ƒ\ƒ‹ˆÊ’u‚ğ•œŒ³‚·‚é
+" æœ€å¾Œã®ã‚«ãƒ¼ã‚½ãƒ«ä½ç½®ã‚’å¾©å…ƒã™ã‚‹
 """"""""""""""""""""""""""""""
 if has("autocmd")
     autocmd BufReadPost *
@@ -157,33 +157,33 @@ endif
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
-" s”Ô†‚Ìİ’è
+" è¡Œç•ªå·ã®è¨­å®š
 """"""""""""""""""""""""""""""
 set number
 autocmd ColorScheme * highlight LineNr ctermfg=darkyellow guifg=#808000
 
 """"""""""""""""""""""""""""""
-" grep‚Ìİ’è
+" grepã®è¨­å®š
 """"""""""""""""""""""""""""""
 set grepprg=internal
 autocmd QuickFixCmdPost *grep* cwindow
-nnoremap [q :cprevious<CR>   " ‘O‚Ö
-nnoremap ]q :cnext<CR>       " Ÿ‚Ö
-nnoremap [Q :<C-u>cfirst<CR> " Å‰‚Ö
-nnoremap ]Q :<C-u>clast<CR>  " ÅŒã‚Ö
+nnoremap [q :cprevious<CR>   " å‰ã¸
+nnoremap ]q :cnext<CR>       " æ¬¡ã¸
+nnoremap [Q :<C-u>cfirst<CR> " æœ€åˆã¸
+nnoremap ]Q :<C-u>clast<CR>  " æœ€å¾Œã¸
 
 """"""""""""""""""""""""""""""
-" ‚»‚Ì‘¼‚Ìİ’è
+" ãã®ä»–ã®è¨­å®š
 """"""""""""""""""""""""""""""
-" ƒXƒƒbƒvƒtƒ@ƒCƒ‹‚Íg‚í‚È‚¢(‚Æ‚«‚Ç‚«–Ê“|‚ÈŒx‚ªo‚é‚¾‚¯‚Å–ğ‚É—§‚Á‚½‚±‚Æ‚ª‚È‚¢)
+" ã‚¹ãƒ¯ãƒƒãƒ—ãƒ•ã‚¡ã‚¤ãƒ«ã¯ä½¿ã‚ãªã„(ã¨ãã©ãé¢å€’ãªè­¦å‘ŠãŒå‡ºã‚‹ã ã‘ã§å½¹ã«ç«‹ã£ãŸã“ã¨ãŒãªã„)
 set noswapfile
-" ƒJ[ƒ\ƒ‹‚ª‰½s–Ú‚Ì‰½—ñ–Ú‚É’u‚©‚ê‚Ä‚¢‚é‚©‚ğ•\¦‚·‚é
+" ã‚«ãƒ¼ã‚½ãƒ«ãŒä½•è¡Œç›®ã®ä½•åˆ—ç›®ã«ç½®ã‹ã‚Œã¦ã„ã‚‹ã‹ã‚’è¡¨ç¤ºã™ã‚‹
 set ruler
-" ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚Ég‚í‚ê‚é‰æ–Êã‚Ìs”
+" ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã«ä½¿ã‚ã‚Œã‚‹ç”»é¢ä¸Šã®è¡Œæ•°
 set cmdheight=2
-" ƒGƒfƒBƒ^ƒEƒBƒ“ƒhƒE‚Ì––”ö‚©‚ç2s–Ú‚ÉƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚ğí•\¦‚³‚¹‚é
+" ã‚¨ãƒ‡ã‚£ã‚¿ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®æœ«å°¾ã‹ã‚‰2è¡Œç›®ã«ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã‚’å¸¸æ™‚è¡¨ç¤ºã•ã›ã‚‹
 set laststatus=2
-" ƒXƒe[ƒ^ƒXs‚É•\¦‚³‚¹‚éî•ñ‚Ìw’è(‚Ç‚±‚©‚ç‚©ƒRƒsƒy‚µ‚½‚Ì‚Å×‚©‚¢ˆÓ–¡‚Í‚í‚©‚Á‚Ä‚¢‚È‚¢)
+" ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹è¡Œã«è¡¨ç¤ºã•ã›ã‚‹æƒ…å ±ã®æŒ‡å®š(ã©ã“ã‹ã‚‰ã‹ã‚³ãƒ”ãƒšã—ãŸã®ã§ç´°ã‹ã„æ„å‘³ã¯ã‚ã‹ã£ã¦ã„ãªã„)
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-" ƒJ[ƒ\ƒ‹‚ğs“ªAs––‚Å~‚Ü‚ç‚È‚¢‚æ‚¤‚É‚·‚é
+" ã‚«ãƒ¼ã‚½ãƒ«ã‚’è¡Œé ­ã€è¡Œæœ«ã§æ­¢ã¾ã‚‰ãªã„ã‚ˆã†ã«ã™ã‚‹
 set whichwrap=b,s,h,l,<,>,[,]
