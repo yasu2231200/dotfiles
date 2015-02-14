@@ -186,6 +186,11 @@ set showtabline=2
 " gVimでもテキストベースのタブページを使う
 set guioptions-=e
 
+" 小文字で検索すると大文字と小文字を無視して検索する
+" 大文字が入ると、ignorecase が無効にする
+set ignorecase
+set smartcase
+
 """"""""""""""""""""""""""""""
 " 表示の設定
 """"""""""""""""""""""""""""""
