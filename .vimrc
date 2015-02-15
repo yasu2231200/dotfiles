@@ -204,3 +204,9 @@ set guioptions-=e
 " 大文字が入ると、ignorecase が無効にする
 set ignorecase
 set smartcase
+
+set clipboard=unnamed,autoselect
+
+autocmd GUIEnter * set transparency=230
+autocmd FocusGained * set transparency=230
+autocmd FocusLost * set transparency=130

@@ -6,12 +6,12 @@ set guifont=Consolas:h9:cSHIFTJIS
 set t_Co=256
 
 " darkカラー
-"set background=dark
-"colorscheme jellybeans
+set background=dark
+colorscheme jellybeans
 
 " lightカラー
-set background=light
-colorscheme solarized
+"set background=light
+"colorscheme solarized
 
 " メニューバーを非表示にする
 set guioptions-=m
